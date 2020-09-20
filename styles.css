@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.settings {
+  border-right: 1px dashed #ccc;
+  width: 350px;
+}
+
+.settings h2 {
+  margin-bottom: 1rem;
+}
+
+.settings ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.settings ul>li>button:hover {
+  background-color: rgb(74, 78, 148);
+}
+
+.settings ul>li>button {
+  white-space:nowrap;
+  border: 1px solid #ccc;
+  padding: 0px;
+  background-color: transparent;
+  outline: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-top: 6px;
+}
+
+.selectorMain {
+  position: relative;
+  width: 350px;
+  box-sizing: border-box;
+}
+
+.titleSelectorMain {
+  position: absolute;
+  cursor: pointer;
+  transition-property: font-size, color;
+  transition: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.titleSelectorMain.up {
+  font-size: 13px;
+  transform: translate(10px, -15px);
+}
+
+ .titleSelectorMain.up:hover {
+  color: blue;
+}
+
+
+.line {
+  height: 0.5px;
+  background-color: #000;
+  margin-top: 10px;
+}
+
+.icon {
+  position: absolute;
+  transition: 0.3s;
+  left: 325px;
+}
+
+.selectorMain.open .icon {
+  transform: rotate(180deg)
+}
+
+.list {
+  position: absolute;
+  top: 100px;
+  left: 175px;
+  width: 0;
+  height: 0;
+  transition-property: width, height, display;
+  transition: 0.5s;
+  transition-duration: 0.5s;
+  display: block;
+}
+
+.selectorMain.open .list {
+  width: 100%;
+  list-style-type: none;
+  border: 0px solid white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin-top: 10px;
+  background: transparent;
+  overflow-y: scroll;
+  height: 200px;
+  position: absolute;
+  transform: translate(-175px, -70px);
+}
+
+.list li {
+  display: none;
+  height: 40px;
+  margin: 0;
+  padding: 26px 15px;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.selectorMain.open .list>li {
+  display: block;
+}
+
+.list li:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.containerTitle {
+  position: relative;
+  cursor: pointer;
+  width: 350px;
+  height: 20px;
+}
+
+.item {
+  display: inline-block;
+  padding-top: 5px;
+  font-weight: 500;
+}
+
